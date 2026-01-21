@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toilet vs Poop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="ui-layer">
+        <div id="score">Score: 0</div>
+        <div id="health">Health: 100%</div>
+        <div id="lives">Lives: 5</div>
+        <div id="main-menu" class="menu-screen">
+            <h1>Toilet vs Poop</h1>
+            <button id="btn-new-game" class="menu-btn">New Game</button>
+            <button id="btn-level-select" class="menu-btn">Level Select</button>
+            <div class="controls-hint">
+                <p>Arrows/WASD to Move | SPACE to Jump</p>
+                <p>Z/Click to Shoot | X to Melee</p>
+            </div>
+        </div>
+        <div id="level-select" class="menu-screen hidden">
+            <h1>Select Level</h1>
+            <div class="level-list">
+                <button class="menu-btn level-btn" data-level="1">Level 1: Bathroom</button>
+                <button class="menu-btn level-btn" data-level="2">Level 2: Sewer</button>
+                <button class="menu-btn level-btn" data-level="3">Level 3: Dark Pipes</button>
+                <button class="menu-btn level-btn" data-level="4">Level 4: Toxic</button>
+                <button class="menu-btn level-btn" data-level="5">Level 5: The End</button>
+            </div>
+            <button id="btn-back" class="menu-btn back-btn">Back</button>
+        </div>
+        <div id="game-over-screen" class="hidden">
+            <h1>GAME OVER</h1>
+            <p>Score: <span id="final-score">0</span></p>
+            <p>Press SPACE to Restart</p>
+        </div>
+
+        <!-- Touch Controls -->
+        <div id="touch-controls">
+            <div id="dpad">
+                <button id="btn-left" class="touch-btn">←</button>
+                <div class="dpad-vertical">
+                    <button id="btn-up" class="touch-btn">↑</button>
+                    <button id="btn-down" class="touch-btn">↓</button>
+                </div>
+                <button id="btn-right" class="touch-btn">→</button>
+            </div>
+            <div id="action-buttons">
+                <button id="btn-melee" class="touch-btn action-btn">⚔️</button>
+                <button id="btn-shoot" class="touch-btn action-btn">🔫</button>
+                <button id="btn-jump" class="touch-btn action-btn">Start/Jump</button>
+            </div>
+        </div>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <script src="game.js"></script>
+</body>
+
+</html>
